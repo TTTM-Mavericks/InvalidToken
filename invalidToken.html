@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Tailor - Token Expired</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background-color: #f0f2f5;
+            margin: 0;
+        }
+
+        .message-container {
+            background-color: #ffffff;
+            border: 1px solid #e0e0e0;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            max-width: 430px;
+            margin-top: 100px;
+        }
+
+        .message-container h1 {
+            color: #d9534f;
+            font-size: 26px;
+            margin-bottom: 20px;
+        }
+
+        .message-container p {
+            color: #555;
+            font-size: 16px;
+            margin-bottom: 30px;
+            line-height: 1.5;
+        }
+
+        .button {
+            padding: 12px 25px;
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+            display: inline-block;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="message-container">
+        <h1>Token Expired or Invalid</h1>
+        <p>Your session has expired!. </br> Please try again or reach out to support if the issue persists.</p>
+        <a href="javascript:void(0);" class="button" onclick="window.close();">Close</a>
+    </div>
+
+    <script>
+        // Check if the current window can be closed
+        if (window.opener == null) {
+            document.querySelector('.button').addEventListener('click', function () {
+                window.location.href = '/'; // Redirect to homepage or login page
+            });
+        }
+    </script>
+</body>
+
+</html>
